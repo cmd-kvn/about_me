@@ -48,34 +48,76 @@ and correctly displaying to the browser console for each question of the guessin
 // }
 // // Print the stored variable to the console
 // console.log('Third question answered with: ' + hometown);
+//
+// // Prompt user with y/n question and store response in variable
+// // Change user input to lower case and evaluate conditionally, then alert the user
+// var likesBeachBoys = prompt('Are the Beach Boys great American music?');
+// if (likesBeachBoys !== null && (likesBeachBoys.toLowerCase() === 'yes' || likesBeachBoys.toLowerCase() === 'y')) {
+//   alert('I wish they all could be California girls!');
+// } else if (likesBeachBoys !== null && (likesBeachBoys === 'no' || likesBeachBoys === 'n')) {
+//   alert('Don\'t you ever touch my radio!');
+// } else if (likesBeachBoys === null) {
+//   alert('Well I guess I know how you feel about music.');
+// }
+// else {
+//   alert('That\'s not even how you answer the question.');
+// }
+// // Print the stored variable to the console
+// console.log('Fourth question answered with: ' + likesBeachBoys);
+//
+// // Prompt user with y/n question and store response in variable
+// // Change user input to lower case and evaluate conditionally, then alert the user
+// var knowsWar = prompt('Do you know War?');
+// if (knowsWar !== null && (knowsWar.toLowerCase() === 'yes' || knowsWar.toLowerCase() === 'y')) {
+//   alert('Huh! Yeah! What is it good for? Absolutely nothing, sing it again, you all!');
+// } else if (knowsWar !== null && (knowsWar.toLowerCase() === 'no' || knowsWar.toLowerCase() === 'n')){
+//   alert('You don\'t know nothing about no War.');
+// } else if (knowsWar === null){
+//   alert('You trying to go to war with me?');
+// } else {
+//   alert('That\'s not even how you answer the question.');
+// }
+// // Print the stored variable to the console
+// console.log('Fifth question answered with: ' + knowsWar);
 
-// Prompt user with y/n question and store response in variable
-// Change user input to lower case and evaluate conditionally, then alert the user
-var likesBeachBoys = prompt('Are the Beach Boys great American music?');
-if (likesBeachBoys !== null && (likesBeachBoys.toLowerCase() === 'yes' || likesBeachBoys.toLowerCase() === 'y')) {
-  alert('I wish they all could be California girls!');
-} else if (likesBeachBoys !== null && (likesBeachBoys === 'no' || likesBeachBoys === 'n')) {
-  alert('Don\'t you ever touch my radio!');
-} else if (likesBeachBoys === null) {
-  alert('Well I guess I know how you feel about music.');
-}
-else {
-  alert('That\'s not even how you answer the question.');
-}
-// Print the stored variable to the console
-console.log('Fourth question answered with: ' + likesBeachBoys);
+// Add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number
+// and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four
+// opportunities to get the correct answer
+var secretNum = 20;
+console.log('Value of secretNum: ', secretNum);
 
-// Prompt user with y/n question and store response in variable
-// Change user input to lower case and evaluate conditionally, then alert the user
-var knowsWar = prompt('Do you know War?');
-if (knowsWar !== null && (knowsWar.toLowerCase() === 'yes' || knowsWar.toLowerCase() === 'y')) {
-  alert('Huh! Yeah! What is it good for? Absolutely nothing, sing it again, you all!');
-} else if (knowsWar !== null && (knowsWar.toLowerCase() === 'no' || knowsWar.toLowerCase() === 'n')){
-  alert('You don\'t know nothing about no War.');
-} else if (knowsWar === null){
-  alert('You trying to go to war with me?');
-} else {
-  alert('That\'s not even how you answer the question.');
+// Evaluate whether the guess is too high or too low and give the user four attempts
+var attempt = 0;
+var max_attempts = 4;
+while (attempt < max_attempts) {
+  var guessedNum = prompt('Guess my secret number.');
+  guessedNum = parseInt(guessedNum);
+  console.log('value of guessedNum: ', guessedNum);
+  console.log('type of guessedNum: ', typeof guessedNum);
+
+  if (guessedNum === secretNum) {
+    alert('BULLSEYE. ', secretNum, ' was my secret Number!');
+    attempt = max_attempts; // exit loop
+  } else if (guessedNum < secretNum) {
+    alert('Too low. Click OK and guess again.');
+    console.log('Attempt #: ', attempt);
+  } else if (guessedNum > secretNum) {
+    alert('Too high. Click OK and guess again.');
+    console.log('Attempt #: ', attempt);
+  } else {
+    alert('Rethink that choice.');
+    console.log('Attempt #: ', attempt);
+  }
+  attempt++;
 }
-// Print the stored variable to the console
-console.log('Fifth question answered with: ' + knowsWar);
+console.log('out of the loop');
+
+// Add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array.
+// For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming
+// skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct
+// answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of
+// the possible correct answers
+
+// Keep a tally of the total number of correct answers given by the user, and at the end of the game,
+// tell the user how well they did with a personalized custom message that includes the number of correct answers
+// and also addresses the user by name
