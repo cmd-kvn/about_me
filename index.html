@@ -1,8 +1,7 @@
 <!--
 Author: Kevin Wong
-Date: 11/7/16
-Assignment: Lab for class 1
-Description: Write a program that accepts user input and, based on that input, displays messages back to the user.
+Date: 11/8/16
+Assignment: Lab for class 2
 -->
 
 <!DOCTYPE html:5>
@@ -12,70 +11,34 @@ Description: Write a program that accepts user input and, based on that input, d
       <!-- meta info also goes here -->
     </menu>
     </title>
+    <!--link css at the start-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
   <body>
+    <main>
+      <h1>About me</h1>
+      <img src="jackie.gif" alt="Lee and Carter picture">
 
-    <ul>
-      <li>What is your name?
-      </li>
-      <li>Where are you from?
-      </li>
-      <li>Do you know how to get to Roscoe's Chicken and Waffles?
-      </li>
-      <li>Would you like to have lunch with me, Detective Carter, and Detective Lee?
-      </li>
-    </ul>
+      <p>Hello. I can only tell you about myself in brief. Consul Han needs my attention in solving a kidnapping case.
+         His daughter has been kidnapped by Juntao. Poor Soo-Yung!
+      </p>
 
-    <script>
-      //Ask the first question
-      console.log('Hello world!');
-      var nameQuestionAnswer = prompt('What is your name?');
-      console.log('First question answered with: ' + nameQuestionAnswer);
-      alert('Hey ' + nameQuestionAnswer + '! That is a pretty cool name!');
+      <p>Originally I'm from Hong Kong, China but currently I'm in Los Angeles on my mission. I'd be farther along in my search
+         if I was working alone. Instead I'm working with this character from LAPD. He doesn't like the Beach Boys for some reason.
+         I think they're great American Music.
+      </p>
 
-      //Ask the second question
-      //The user's response to each question (input) should be stored in a separate variable. Name your variables carefully.
-      var locationQuestionAnswer = prompt('Where are you from, ' + nameQuestionAnswer + '?');
-      //Using these responses, return an alert to the user (output) that concatenates their response into some kind of reply like we did in class.
-      //have your alert for each question utilize the responses to all of the prior questions
-      alert('Oh, you\'re from ' + locationQuestionAnswer + ', ' + nameQuestionAnswer + '? I think I\'ve been there... Do you know Joe from '
-            + locationQuestionAnswer + '?...Joe mama...');
-      //for each response, create a console.log() message that indicates the nature of the question and the user's response, as we did in class.
-      console.log('Second question answered with: ' + locationQuestionAnswer);
+      <p>Who knows, maybe this East meets West experience will work out after we upstage the FBI, shake down a pool hall, and get funky
+         to some <em>War</em>. Perhaps a sequel or two will come out after this...
+      </p>
+    </main>
 
-      //Ask the third question
-      //The user's response to each question (input) should be stored in a separate variable. Name your variables carefully.
-      var knowsDirections = prompt('Do you know how to get to Roscoe\'s Chicken and Waffles?');
-      //Using these responses, return an alert to the user (output) that concatenates their response into some kind of reply like we did in class.
-      //have your alert for each question utilize the responses to all of the prior questions
-      if (knowsDirections.toUpperCase() === 'YES') {
-        alert('Finally! ' + nameQuestionAnswer + ', you a cat that knows stuff. I knew cats from ' + locationQuestionAnswer + ' know their directions.');
-      } else if (knowsDirections.toUpperCase() === 'NO'){
-        alert(nameQuestionAnswer + ', I don\'t believe you\'re from ' + locationQuestionAnswer + '. Cats there know their directions.')
-      } else {
-        alert('English, ' + nameQuestionAnswer + '! Do they speak it in ' + locationQuestionAnswer + '?! Say yes or no next time.')
-      };
-      //for each response, create a console.log() message that indicates the nature of the question and the user's response, as we did in class.
-      console.log('Third question answered with: ' + knowsDirections);
-
-      //Ask the fourth question
-      //The user's response to each question (input) should be stored in a separate variable. Name your variables carefully.
-      var goToLunch = confirm('Would you like to have lunch with me, Detective Carter, and Detective Lee?');
-      //check value of 'OK' and 'cancel' after 'confirm'
-      //console.log(goToLunch); //ok = true, cancel = false
-      //Using these responses, return an alert to the user (output) that concatenates their response into some kind of reply like we did in class.
-      //have your alert for each question utilize the responses to all of the prior questions
-      if (goToLunch === true){
-        alert('Cool, ' + nameQuestionAnswer + '. But let\'s get one thing straight. Just because you\'re from ' + locationQuestionAnswer +
-              ' and you answered ' + knowsDirections.toLowerCase() + ' about going to Roscoe\'s, I\'m still Michael Jackson. You\'re Tito.');
-      } else if (goToLunch === false){
-        alert('You know what, ' + nameQuestionAnswer + ' from ' + locationQuestionAnswer + ', who said \'' + knowsDirections.toLowerCase() +
-              ',\' about directions to Roscoe\'s. We didn\'t want you in Rush Hour 4 anyway.');
-      };
-      //for each response, create a console.log() message that indicates the nature of the question and the user's response, as we did in class.
-      console.log('Fourth question answered with: ' + goToLunch);
-    </script>
+    <footer>
+      Copyright Inspector Lee 2016
+    </footer>
+    <!--link script at the end-->
+    <script src="app.js"></script>
 
   </body>
 
