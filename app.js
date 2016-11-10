@@ -64,7 +64,7 @@ var likesBeachBoys = prompt('Are the Beach Boys great American music?');
 if (likesBeachBoys !== null && (likesBeachBoys.toLowerCase() === 'yes' || likesBeachBoys.toLowerCase() === 'y')) {
   alert('I wish they all could be California girls!');
   tallyCorrect++;
-} else if (likesBeachBoys !== null && (likesBeachBoys.toLowerCase() === 'no' || likesBeachBoys === 'n')) {
+} else if (likesBeachBoys !== null && (likesBeachBoys.toLowerCase() === 'no' || likesBeachBoys.toLowerCase() === 'n')) {
   alert('Don\'t you ever touch my radio!');
   tallyWrong++;
 } else if (likesBeachBoys === null) {
