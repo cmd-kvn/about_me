@@ -43,3 +43,18 @@ footer {
   border: 1px dotted black;
   margin: auto;
 }
+
+ol {
+  font-family: "arial narrow";
+  font-weight: bold;
+  color: black;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+ul {
+  font-family: "arial narrow";
+  font-weight: bold;
+  color: black;
+  font-size: 1.5em;
+}
