@@ -80,43 +80,74 @@ and correctly displaying to the browser console for each question of the guessin
 // // Print the stored variable to the console
 // console.log('Fifth question answered with: ' + knowsWar);
 
-// Add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number
-// and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four
-// opportunities to get the correct answer
-var secretNum = 20;
-console.log('Value of secretNum: ', secretNum);
+// // Add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number
+// // and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four
+// // opportunities to get the correct answer
+// var secretNum = 20;
+// console.log('Value of secretNum: ', secretNum);
+//
+// // Evaluate whether the guess is too high or too low and give the user four attempts
+// var attempt = 0;
+// var maxAttempts = 4;
+// while (attempt < max_attempts) {
+//   var guessedNum = prompt('Guess my secret number.');
+//   guessedNum = parseInt(guessedNum);
+//   console.log('value of guessedNum: ', guessedNum);
+//   console.log('type of guessedNum: ', typeof guessedNum);
+//
+//   if (guessedNum === secretNum) {
+//     alert('BULLSEYE. ', secretNum, ' was my secret Number!');
+//     attempt = maxAttempts; // exit loop
+//   } else if (guessedNum < secretNum) {
+//     alert('Too low. Click OK and guess again.');
+//     console.log('Attempt #: ', attempt);
+//   } else if (guessedNum > secretNum) {
+//     alert('Too high. Click OK and guess again.');
+//     console.log('Attempt #: ', attempt);
+//   } else {
+//     alert('Rethink that choice.');
+//     console.log('Attempt #: ', attempt);
+//   }
+//   attempt++;
+// }
+// console.log('out of the loop');
 
-// Evaluate whether the guess is too high or too low and give the user four attempts
+// Add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array.
+// For now, I will structure this question so that the user has six tries to get a single correct
+// answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of
+// the possible correct answers
+var guess;
 var attempt = 0;
-var max_attempts = 4;
-while (attempt < max_attempts) {
-  var guessedNum = prompt('Guess my secret number.');
-  guessedNum = parseInt(guessedNum);
-  console.log('value of guessedNum: ', guessedNum);
-  console.log('type of guessedNum: ', typeof guessedNum);
+var maxAttempts = 6;
+var goodGuess;
+var basketballPlayers = ['michael jordan', 'steve nash', 'damian lillard', 'brandon roy'];
+console.log(basketballPlayers);
 
-  if (guessedNum === secretNum) {
-    alert('BULLSEYE. ', secretNum, ' was my secret Number!');
-    attempt = max_attempts; // exit loop
-  } else if (guessedNum < secretNum) {
-    alert('Too low. Click OK and guess again.');
-    console.log('Attempt #: ', attempt);
-  } else if (guessedNum > secretNum) {
-    alert('Too high. Click OK and guess again.');
-    console.log('Attempt #: ', attempt);
-  } else {
-    alert('Rethink that choice.');
-    console.log('Attempt #: ', attempt);
+while (attempt < maxAttempts) {
+  guess = prompt('Can you guess one of my four favorite basketball players?').toLowerCase();
+
+  for (var i = 0; i < basketballPlayers.length; i++) {
+    if (guess === basketballPlayers[i]) {
+      goodGuess = true;
+      console.log('guess: ', guess, '. attempt: ', attempt);
+      break;
+    } else if (guess !== basketballPlayers[i]) {
+      goodGuess = false;
+      console.log('guess: ', guess, '. attempt: ', attempt);
+    }
+  }
+
+  if (goodGuess === true){
+    alert('Yep. ' + guess.toUpperCase() + ' is Hall of Fame material. Here\'s all of them: ' + basketballPlayers);
+    console.log('YES');
+    attempt = maxAttempts;
+  } else if (goodGuess === false) {
+    alert('Nope. ' + guess.toUpperCase() + ' would get worked by my guys.');
+    console.log('BOO');
   }
   attempt++;
 }
-console.log('out of the loop');
-
-// Add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array.
-// For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming
-// skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct
-// answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of
-// the possible correct answers
+console.log('out of loop');
 
 // Keep a tally of the total number of correct answers given by the user, and at the end of the game,
 // tell the user how well they did with a personalized custom message that includes the number of correct answers
