@@ -17,19 +17,25 @@ and correctly displaying to the browser console for each question of the guessin
 
 // Prompt user with y/n question and store response in variable
 // Change user input to lower case and evaluate conditionally, then alert the user
-var myName = prompt('What\'s my name?');
-if (myName.toLowerCase() === 'inspector lee') {
-  alert('Yes, but you can call me Lee.');
-  tallyCorrect++;
-} else {
-  alert('It\'s Inspector Lee damnit. Don Cheadle backed me up on that one time.');
-  tallyWrong++;
-}
+function firstQuestion() {
+//first question
+  var myName = prompt('What\'s my name?');
+  if (myName.toLowerCase() === 'inspector lee') {
+    alert('Yes, but you can call me Lee.');
+    tallyCorrect++;
+  } else {
+    alert('It\'s Inspector Lee damnit. Don Cheadle backed me up on that one time.');
+    tallyWrong++;
+  }
 // Print the stored variable to the console
-console.log('First question answered with: ' + myName);
-
+  console.log('First question answered with: ' + myName);
+//first question
+}
+firstQuestion();
 // Prompt user with y/n question and store response in variable
 // Change user input to lower case and evaluate conditionally, then alert the user
+
+//second question
 var searchPerson = prompt('Who am I searching for?');
 if (searchPerson.toLowerCase() === 'soo-yung' || searchPerson.toLowerCase() === 'soo yung') {
   alert('Yes, I only care about the girl!');
@@ -43,9 +49,12 @@ if (searchPerson.toLowerCase() === 'soo-yung' || searchPerson.toLowerCase() === 
 }
 // Print the stored variable to the console
 console.log('Second question answered with: ' + searchPerson);
+//second question
 
 // Prompt user with y/n question and store response in variable
 // Change user input to lower case and evaluate conditionally, then alert the user
+
+//third question
 var hometown = prompt('Where am I from?');
 if (hometown.toLowerCase() === 'hong kong') {
   alert('Yes. Come visit sometime. We can hang in my crib. I will show you my \'hood.');
@@ -57,9 +66,12 @@ I\'m the King. I\'m Michael Jackson, you\'re Tito.');
 }
 // Print the stored variable to the console
 console.log('Third question answered with: ' + hometown);
+//third question
 
 // Prompt user with y/n question and store response in variable
 // Change user input to lower case and evaluate conditionally, then alert the user
+
+//fourth question
 var likesBeachBoys = prompt('Are the Beach Boys great American music?');
 if (likesBeachBoys !== null && (likesBeachBoys.toLowerCase() === 'yes' || likesBeachBoys.toLowerCase() === 'y')) {
   alert('I wish they all could be California girls!');
@@ -77,9 +89,12 @@ else {
 }
 // Print the stored variable to the console
 console.log('Fourth question answered with: ' + likesBeachBoys);
+//fourth question
 
 // Prompt user with y/n question and store response in variable
 // Change user input to lower case and evaluate conditionally, then alert the user
+
+//fifth question
 var knowsWar = prompt('Do you know War?');
 if (knowsWar !== null && (knowsWar.toLowerCase() === 'yes' || knowsWar.toLowerCase() === 'y')) {
   alert('Huh! Yeah! What is it good for? Absolutely nothing, sing it again, you all!');
@@ -96,10 +111,13 @@ if (knowsWar !== null && (knowsWar.toLowerCase() === 'yes' || knowsWar.toLowerCa
 }
 // Print the stored variable to the console
 console.log('Fifth question answered with: ' + knowsWar);
+//fifth question
 
 // Add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number
 // and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four
 // opportunities to get the correct answer
+
+//sixth question
 var secretNum = 20;
 console.log('Value of secretNum: ', secretNum);
 
@@ -130,10 +148,13 @@ while (attempt < maxAttempts) {
 }
 console.log('out of the loop');
 
+//sixth question
 // Add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array.
 // For now, I will structure this question so that the user has six tries to get a single correct
 // answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of
 // the possible correct answers
+
+//seventh question
 var guess;
 attempt = 0;
 maxAttempts = 6;
@@ -167,6 +188,7 @@ while (attempt < maxAttempts) {
   attempt++;
 }
 console.log('out of loop');
+//seventh question
 
 // Keep a tally of the total number of correct answers given by the user, and at the end of the game,
 // tell the user how well they did with a personalized custom message that includes the number of correct answers
