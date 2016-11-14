@@ -58,3 +58,20 @@ ul {
   color: black;
   font-size: 1.5em;
 }
+
+.nav_link {
+  font-family: "arial narrow";
+  font-weight: bold;
+  color: black;
+  font-size: 1.25em;
+}
+
+aside {
+  position: fixed;
+  top: 50%;
+  right: 8px;
+  float: right;
+  width: 20%;
+  border: 4px solid goldenrod;
+  background-color: rgb(255, 180, 180);
+}

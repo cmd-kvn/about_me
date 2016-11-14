@@ -15,6 +15,8 @@ fourthQuestion();
 fifthQuestion();
 sixthQuestion();
 seventhQuestion();
+tallyMessage();
+
 /*The questions in the guessing game must require a mix of yes/no answers,
 and user input must accept either y/n or yes/no responses,
 with either .toUpperCase() or .toLowerCase() used to validate the user input
@@ -70,7 +72,7 @@ function thirdQuestion() {
     tallyCorrect++;
   } else {
     alert('You must think we\'re in the United States of James Carter. I\'m the President, I\'m the Emperor, \
-  I\'m the King. I\'m Michael Jackson, you\'re Tito.');
+I\'m the King. I\'m Michael Jackson, you\'re Tito.');
     tallyWrong++;
   }
 // Print the stored variable to the console
@@ -169,8 +171,8 @@ function sixthQuestion() {
 function seventhQuestion() {
 //seventh question
   var guess;
-  attempt = 0;
-  maxAttempts = 6;
+  var attempt = 0;
+  var maxAttempts = 6;
   var goodGuess;
   var basketballPlayers = ['michael jordan', 'steve nash', 'damian lillard', 'brandon roy'];
   console.log(basketballPlayers);
@@ -209,6 +211,16 @@ function seventhQuestion() {
 // and also addresses the user by name
 console.log('correct answers: ', tallyCorrect);
 
-var userName = prompt('Hey champ, what\'s your name?');
-alert(userName + ', you finished all my questions. You got ' + tallyCorrect + ' correct answers after 7 questions. Pat yourself\
- on the back.');
+function tallyMessage () {
+  var userName = prompt('Hey champ, what\'s your name?');
+
+  if (tallyCorrect === 1) {
+    alert(userName + ', you finished all my questions. You got ' + tallyCorrect + ' correct answer after 7 questions. Pat yourself\
+    on the back.');
+  } else if (tallyCorrect === 0) {
+    alert('You got ' + tallyCorrect + ' correct answers after 7 questions. You have brought shame to your family, ' + userName);
+  } else {
+    alert(userName + ', you finished all my questions. You got ' + tallyCorrect + ' correct answers after 7 questions. Pat yourself\
+    on the back.');
+  }
+}
